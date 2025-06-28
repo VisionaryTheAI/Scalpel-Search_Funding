@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+
+body { 
+    font-family: 'Noto Sans KR', sans-serif; 
+    background-color: #f5f5f7; 
+    color: #1d1d1f; 
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 온보딩 스타일 --- */
+.onboarding-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+}
+.progress { font-size: 16px; color: #86868b; margin-bottom: 30px; }
+.onboarding-container h1 { font-size: 32px; font-weight: 700; line-height: 1.5; max-width: 600px; margin-bottom: 40px; }
+textarea, input[type="text"] {
+    width: 100%;
+    max-width: 580px;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    background-color: #fff;
+    resize: none;
+    text-align: center;
+}
+textarea { height: 150px; text-align: left; }
+.button { display: inline-block; margin-top: 40px; padding: 15px 40px; font-size: 18px; font-weight: 700; color: #fff; background-color: #0071e3; border: none; border-radius: 30px; cursor: pointer; text-decoration: none; }
+.choice-container { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 600px; }
+.choice-box {
+    padding: 30px;
+    border: 2px solid #d2d2d7;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+}
+.choice-box:hover { border-color: #0071e3; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.choice-box strong { font-size: 20px; font-weight: 700; }
+.choice-box p { margin: 10px 0 0; font-size: 16px; color: #86868b; }
+
+/* --- 메인 피드 & 상세 페이지 공통 스타일 --- */
+.header { text-align: center; padding: 20px; border-bottom: 1px solid #d2d2d7; background-color: #fff; }
+.header h1 { font-size: 24px; font-weight: 700; margin: 0; }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+a.card-link { text-decoration: none; color: inherit; }
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover { transform: translateY(-5px); }
+.card-match-reason { background-color: #0071e3; color: #ffffff; padding: 10px 30px; font-size: 14px; font-weight: 700; }
+.card-match-reason strong { font-weight: 900; }
+.card-image { height: 300px; background-color: #f5f5f7; background-size: cover; background-position: center; }
+.card-content { padding: 30px; }
+.card-content h2 { font-size: 28px; font-weight: 900; margin: 0 0 20px 0; }
+.card-narrative p { margin: 12px 0; font-size: 16px; line-height: 1.7; }
+.card-narrative .opportunity { font-weight: 700; color: #0071e3; }
+
+/* --- 기업 상세 페이지 스타일 --- */
+.hero-image {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.hero-image::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); }
+.hero-image h1 { font-size: 56px; font-weight: 900; margin: 0; position: relative; z-index: 1; }
+.narrative-section { margin-top: 60px; border-left: 3px solid #0071e3; padding-left: 30px; }
+.narrative-section p { font-size: 18px; line-height: 1.9; margin: 18px 0; }
+.narrative-section .opportunity { font-size: 22px; font-weight: 700; color: #1d1d1f; }
+.divider { height: 2px; background-color: #f5f5f7; border: none; margin: 80px 0; }
+.proof-section h2 { font-size: 32px; font-weight: 900; text-align: center; margin-bottom: 50px; }
+.graph-container { background-color: #f5f5f7; padding: 40px; border-radius: 16px; text-align: center; }
+.graph-container h3 { margin-top: 0; font-size: 20px; font-weight: 700; }
+.graph-container p { font-size: 16px; color: #86868b; margin-bottom: 30px; }
+.graph { height: 300px; border-left: 2px solid #d2d2d7; border-bottom: 2px solid #d2d2d7; background-color: #fff; position: relative; padding: 20px; }
+.graph-legend { margin-top: 20px; font-size: 14px; color: #86868b; }
+
+/* --- Apple 스타일 그래프를 위한 스타일 --- */
+.apple-graphs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.apple-graph-item {
+    text-align: center;
+    max-width: 400px;
+}
+
+.apple-graph-item h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 20px;
+}
+
+.apple-graph {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.apple-graph-caption {
+    font-size: 16px;
+    color: #86868b;
+}
+
+.opportunity-zone {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ff9f0a;
+    margin-top: 10px;
+}
+
+.satisfaction-rate {
+    font-size: 48px;
+    font-weight: 900;
+    color: #0071e3;
+    margin-bottom: 10px;
+}
+
+.market-size {
+    font-size: 36px;
+    font-weight: 900;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* --- Apple 스타일 SVG 그래프를 위한 스타일 --- */
+.apple-graph-svg {
+    width: 100%;
+    max-width: 250px; /* 그래프 크기 조정 */
+    height: auto;
+    margin-bottom: 20px;
+}
